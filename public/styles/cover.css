@@ -98,7 +98,7 @@ body {
   border-bottom-color: #fff;
 }
 
-@media {
+@media (min-width: 768px) {
   .masthead-brand {
     float: left;
   }
@@ -135,7 +135,7 @@ body {
  * Affix and center
  */
 
-@media  {
+@media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -157,7 +157,7 @@ body {
   }
 }
 
-@media {
+@media (min-width: 992px) {
   .masthead,
   .mastfoot,
   .cover-container {
