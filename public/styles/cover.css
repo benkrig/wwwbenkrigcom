@@ -2,6 +2,8 @@
  * Globals
  */
 
+
+
 /* Links */
 a,
 a:focus,
@@ -17,6 +19,7 @@ a:hover {
   text-shadow: none; /* Prevent inheritence from `body` */
   background-color: #fff;
   border: 1px solid #fff;
+
 }
 
 
@@ -158,6 +161,46 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 100%;
   }
+}
+
+
+.btn-xlarge 
+{
+    padding: 50px 50px;
+    font-size: 30px; 
+    line-height: normal;
+    -webkit-border-radius: 0px;
+       -moz-border-radius: 0px;
+            border-radius: 0px;
+    color: #fff;
+    width: 100%;
+}
+.home {
+    background-color: #003762; 
+
+}
+.home:focus,
+.home:hover 
+{
+  background-color: #0A92FB;
+}
+.work
+{
+  background-color: #710052;
+}
+.work:focus,
+.work:hover
+{
+  background-color: #FC00B6;
+}
+.contact
+{
+  background-color: #984A00;
+}
+.contact:focus,
+.contact:hover
+{
+  background-color: #FF7C00;
 }
