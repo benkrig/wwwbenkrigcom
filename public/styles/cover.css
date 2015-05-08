@@ -3,7 +3,6 @@
  */
 
 
-
 /* Links */
 a,
 a:focus,
@@ -19,7 +18,6 @@ a:hover {
   text-shadow: none; /* Prevent inheritence from `body` */
   background-color: #fff;
   border: 1px solid #fff;
-
 }
 
 
@@ -30,7 +28,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #77002A;
+  background-color: #005BE2;
 }
 body {
   color: #fff;
@@ -161,54 +159,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%;
+    width: 700px;
   }
-}
-
-.nopadding {
-   padding: 0 !important;
-   margin: 0 !important;
-}
-
-.btn-xlarge 
-{
-    padding: 1em 1em;
-    font-size: 2em; 
-    line-height: normal;
-    -webkit-border-radius: 0px;
-       -moz-border-radius: 0px;
-            border-radius: 0px;
-    color: #fff;
-    width: 100%;
-    text-align: center;
-}
-.home 
-{
-    background-color: #003762; 
-
-}
-.home:focus,
-.home:hover 
-{
-  background-color: #0A92FB;
-}
-
-.work
-{
-  background-color: #710052;
-}
-.work:focus,
-.work:hover
-{
-  background-color: #FC00B6;
-}
-
-.contact
-{
-  background-color: #984A00;
-}
-.contact:focus,
-.contact:hover
-{
-  background-color: #FF7C00;
 }
