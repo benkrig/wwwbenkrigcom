@@ -29,6 +29,7 @@ html,
 body {
   height: 100%;
   background-color: #005BE2;
+  background-color: #212121;
 }
 body {
   color: #fff;
@@ -56,6 +57,7 @@ body {
 
 /* Padding for spacing */
 .inner {
+
   padding: 30px;
 }
 
@@ -111,7 +113,9 @@ body {
  */
 
 .cover {
+  margin-top: 5em;
   padding: 0 20px;
+  margin-bottom: 5em;
 }
 .cover .btn-lg {
   padding: 10px 20px;
@@ -159,6 +163,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 100%;
   }
 }

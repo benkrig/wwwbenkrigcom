@@ -1,0 +1,54 @@
+#slides_control > div{
+		height: 200px;
+}
+img
+{
+		margin:auto;  
+		width: 400px;
+		height: 400px;
+		margin-top: 10em;
+		margin-bottom: 2em;
+}
+#slides_control {
+		position:absolute;
+		width: 400px;
+		left:50%;
+		top:20px;
+		background-color: #fff ! important;
+}
+
+.carousel-control.left, .carousel-control.right 
+{
+    background-image: none;
+
+}
+
+
+.img-circle,.img
+{
+	width: 64px;
+	height: 64px;
+	margin-top: 0;
+	margin-left: 1em;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+	margin: auto;
+  text-align: center;
+}
+.marketing .img-circle
+{
+		width: 300px;
+		height: 300px;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+
+
