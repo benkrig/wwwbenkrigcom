@@ -17,6 +17,11 @@ app.config(function($routeProvider)
 	{
 		templateUrl: 'partials/contact.html',
 		controller : 'global_controller'
+	})
+	.otherwise(
+	{
+		templateUrl: 'partials/home.html',
+		controller: 'NavBarController'
 	});
 });
 
