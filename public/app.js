@@ -38,16 +38,10 @@ controllers.global_controller = function($scope, $location)
 	$scope.slides = 
 	[
 		{
-			image: 'http://lorempixel.com/400/400/abstract'
+			image: 'slides/slide1_framed.png'
 		},
 		{
-			image: 'http://lorempixel.com/400/400/technics'
-		},
-		{
-			image: 'http://lorempixel.com/400/400/city'
-		},
-		{
-			image: 'http://lorempixel.com/400/400/transport'
+			image: 'slides/slide2_framed.png'
 		}
 	];
 };

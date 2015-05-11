@@ -1,9 +1,19 @@
+* {
+margin:0;
+padding:0;
+}
 
 .work-button
 {
 	width: 100%;
 	margin-bottom: 6em;
 	margin-top: 2em;
+}
+
+.img-circle-margin
+{
+	margin-bottom: 1em;
+
 }
 
 

@@ -1,3 +1,5 @@
+
+
 #slides_control > div{
 		height: 200px;
 }
@@ -37,6 +39,7 @@ img
 	margin-top: 0;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
+	margin-bottom: 1em;
 }
 
 /* Center align the text within the three columns below the carousel */
