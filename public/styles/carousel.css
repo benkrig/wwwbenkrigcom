@@ -45,19 +45,19 @@ img
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
 	margin: auto;
-  text-align: center;
+	text-align: center;
 }
 .marketing .img-circle
 {
-		width: 300px;
-		height: 300px;
+	width: 300px;
+	height: 300px;
 }
 .marketing h2 {
   font-weight: normal;
 }
 .marketing .col-lg-4 p {
-  margin-right: 1em;
-  margin-left: 1em;
+  margin-right: 0em;
+  margin-left: 0em;
 }
 
 
