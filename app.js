@@ -19,7 +19,7 @@ var controllers = {};
 
 controllers.global_controller = function($scope)
 {
-
+	$scope.copyRight = 'Copyright @Ben Krig 2017';
 };
 
 app.controller(controllers);
