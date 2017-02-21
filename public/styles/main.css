@@ -68,7 +68,27 @@ fieldset[disabled] .btn-main.active {
 
   background-color: #212121;
   width: 100%;
+  margin: -10px;
   height: 100vh
 }
+
+.panel-here2there 
+{
+
+  background-color: #880e4f;
+  width: 100%;
+  height: 100vh
+
+}
+
+
+.panel-other 
+{
+
+  background-color: #212121;
+  width: 100%;
+  height: 100vh
+}
+
 
 
