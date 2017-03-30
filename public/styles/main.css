@@ -65,6 +65,7 @@ fieldset[disabled] .btn-main.active {
 
 .panel-metafora 
 {
+  text-align: center;
   color: white;
   background-color: #c6d8d3;
   width: 100%;
