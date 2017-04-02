@@ -52,7 +52,7 @@ controllers.global_controller = function($scope, $location)
 	$scope.blogs = 
 	[
 		{
-			image: 'blogs/ben.jpg',
+			image: 'blogs/ben.png',
 			title: "OpenCV: Facial Recognition",
 			date: "4/2/17"
 		}
