@@ -51,9 +51,12 @@ controllers.global_controller = function($scope, $location)
 	];
 	$scope.blogs = 
 	[
-		image: 'blogs/ben.jpg'
-		title: "OpenCV: Facial Recognition"
-		date: "4/2/17"
+		{
+			image: 'blogs/ben.jpg',
+			title: "OpenCV: Facial Recognition",
+			date: "4/2/17"
+		}
+		
 	];
 };
 
