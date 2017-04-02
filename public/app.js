@@ -49,6 +49,12 @@ controllers.global_controller = function($scope, $location)
 			image: 'slides/slide2_framed.png'
 		}
 	];
+	$scope.blogs = 
+	[
+		image: 'blogs/ben.jpg'
+		title: "OpenCV: Facial Recognition"
+		date: "4/2/17"
+	];
 };
 
 app.controller(controllers);
