@@ -12,6 +12,11 @@ app.config(function($routeProvider)
 	{
 		templateUrl: 'partials/work.html',
 		controller : 'global_controller'
+	})
+	.when('/asd',
+	{
+		templateUrl: 'partials/asd.html',
+		controller : 'global_controller'	
 	});
 });
 
