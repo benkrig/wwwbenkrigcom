@@ -53,7 +53,7 @@ controllers.global_controller = function($scope, $location)
 	[
 		{
 			image: 'blogs/ben.png',
-			title: "OpenCV: Facial Recognition",
+			title: "OpenCV: Facial Recognition using Haar Feature-based Cascade Classifiers",
 			date: "4/2/17"
 		}
 		
