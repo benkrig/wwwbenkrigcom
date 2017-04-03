@@ -37,18 +37,12 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 
-#include <iostream>
-#include <stdio.h>
-
-
 int main()
 {
-    
-    //Try to capture frames with our webcam. If we can't, we close.
+    //Capture with our webcam. If we can't, we close.
     cv::VideoCapture wc;
     
-    if(!wc.open(0))
-        return 0;
+    if(!wc.open(0)) return 0;
     
     //Set up our Haar Cascade.
     cv::CascadeClassifier frontal_face_cascade;
@@ -60,14 +54,11 @@ int main()
     //finished initializing, now we start scanning for faces.
     for(;;)
     {
-        wc >> frame;
+        wc.read(frame);
         
-        //.clone() current frame
-        cv::Mat original = frame.clone();
-        
-        // Convert the current frame to grayscale:
+        //Convert the current frame to grayscale:
         cv::Mat g_value;
-        cvtColor(original, g_value, CV_BGR2GRAY);
+        cvtColor(frame, g_value, CV_BGR2GRAY);
         // Find the faces in the frame:
         std::vector< cv::Rect_<int> > faces;
         frontal_face_cascade.detectMultiScale(g_value, faces);
@@ -75,27 +66,25 @@ int main()
         //Draw rect around each face
         for(int i = 0; i < faces.size(); i++)
         {
-            // Process face by face:
+            //Process face by face:
             cv::Rect face_i = faces[i];
             
-            rectangle(original, face_i, CV_RGB(0, 255,0), 1);
+            rectangle(frame, face_i, CV_RGB(0, 255,0), 1);
             
             //add text
             int pos_x = std::max(face_i.tl().x - 10, 0);
             int pos_y = std::max(face_i.tl().y - 10, 0);
-            putText(original, "Face " + std::to_string(i), cv::Point(pos_x, pos_y), cv::FONT_ITALIC, 1.0, CV_RGB(0,255,0), 2.0);
+            putText(frame, "Face " + std::to_string(i), cv::Point(pos_x, pos_y), cv::FONT_ITALIC, 1.0, CV_RGB(0,255,0), 2.0);
         }
         
         //show window
-        imshow("facial_recognition", original);
+        imshow("facial_recognition", frame);
         
         //27 == Escape key
-        char key = (char) cv::waitKey(20);
-        if(key == 27)
-            break;
+        char key = (char) cv::waitKey(1);
+        if(key != -1) break;
     }
     cv::waitKey(0);
-    
     return 0;
 }</code></pre>
 								</div>
