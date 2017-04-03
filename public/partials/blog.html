@@ -71,6 +71,29 @@ int main()
 	haarcascade_frontalface_alt2.xml comes prepackaged with OpenCV, you can create your own or find another if you'd like.*/
 	cv::CascadeClassifier frontal_face_cascade;
 	frontal_face_cascade.load("/opencv/data/haarcascades/haarcascade_frontalface_alt2.xml");
+
+	/*Set up our storage frame*/
+	cv::Mat frame;
+
+	/*Start our continous loop.*/
+	for(;;)
+	{
+		/*Capture current frame from camera*/
+		wc.read(frame);
+
+		/*Go to grayscale*/
+		cv::Mat g_scale;
+		cvtColor(frame, g_value, CV_BGR2GRAY);
+
+		/*Store faces found from frame*/
+		std::vector < cv::Rect_< int > > faces;
+		/*detect faces FROM g_value and store in our vectore faces*/
+		frontal_face_cascade.detectMultiScale(g_value, faces);
+
+		/*loop and draw rect around each face*/
+	}
+	cv::waitKey(0);
+	return 0;
 }
 									</code></pre>
 
