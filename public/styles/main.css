@@ -82,6 +82,7 @@ fieldset[disabled] .btn-main.active {
 }
 .panel-blog
 {
+  margin-top: 30px;
   color: black;
   text-shadow: none;
   background-color: white;
