@@ -61,17 +61,16 @@
 									<pre class="prettyprint"><code class="language-cpp">
 int main()
 {
-	/*I will be hard coding scope for practice and better understanding of where I'm getting Objects.
-	Again, we get VideoCapture from highgui.hpp. Click the link in the #include section to read up.*/
+	/*I will be hard coding scope for practice and better understanding of what I'm building Objects from.
+	If you do not understand or know what class I am instancing these objects from, click the links in the #include section.*/
 	cv::VideoCapture = wc;
-	/*If you have multiple Cameras attached to your machine, you can use wc.open(< int > ) to select a different one.
-	Open camera, close if we can't.*/
+	/*Open camera, close if we can't.*/
 	if(!wc.open(0)) return 0;
-	/*Set up our Haar Cascade. We get this from objdetect.hpp.
-	We're loading in a Haar Cascade that comes prepackaged with OpenCV, you can make or find your own if you'd like.
-	Your file path may be different.*/
-    cv::CascadeClassifier frontal_face_cascade;
-    frontal_face_cascade.load("/opencv/data/haarcascades/haarcascade_frontalface_alt2.xml");
+
+	/*Set up our Haar Cascade. 
+	haarcascade_frontalface_alt2.xml comes prepackaged with OpenCV, you can create your own or find another if you'd like.*/
+	cv::CascadeClassifier frontal_face_cascade;
+	frontal_face_cascade.load("/opencv/data/haarcascades/haarcascade_frontalface_alt2.xml");
 }
 									</code></pre>
 
