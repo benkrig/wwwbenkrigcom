@@ -56,7 +56,7 @@
 									</code></pre>
 
 									<br/>
-									<p>Let's start coding. Gameplan is as follows: first initialize vars (camera, haarcascade, and a place to store a single frame), second in a loop get a frame, third convert frame to grayscale, fourth use haarcascade to return any faces,  fifth loop through our returned faces and draw a rectangle over them, sixth repeat until signalled to close.</p>
+									<p>Let's start coding. Gameplan is as follows: first initialize vars (camera, haarcascade, and a place to store a single frame), second in a loop get a frame, third convert frame to grayscale, fourth use haarcascade to return any faces in our grayscale,  fifth loop through our returned faces and draw a rectangle over them, sixth repeat until signalled to close.</p>
 									<br/>
 									<pre class="prettyprint"><code class="language-cpp">
 int main()
@@ -81,16 +81,16 @@ int main()
 		/*Capture current frame from camera*/
 		wc.read(frame);
 
-		/*Go to grayscale*/
+		/*Convert to gray*/
 		cv::Mat g_value;
 		cvtColor(frame, g_value, CV_BGR2GRAY);
 
-		/*Store faces found from frame*/
+		/*Store faces found in vector*/
 		std::vector < cv::Rect_< int > > faces;
-		/*detect faces FROM g_value and store in our vectore faces*/
+		/*Detect faces FROM g_value and store in our vectore faces*/
 		frontal_face_cascade.detectMultiScale(g_value, faces);
 
-		/*iterate and draw rect around each face*/
+		/*Iterate and draw rect around each face*/
 		for(int i = 0; i < faces.size(); i ++)
 		{
 			/*Get current face*/
@@ -107,7 +107,7 @@ int main()
 		/*Show window with frame*/
 		imshow("facial_recognition", frame);
 
-		/*end if any key is pressed*/
+		/*End if any key is pressed*/
 		char key = (char) cv::waitKey(1);
 		if(key != -1) break;
 	}
