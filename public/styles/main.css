@@ -108,6 +108,7 @@ fieldset[disabled] .btn-main.active {
 }
 .blog_horizontal
 {
+  width: 50%;
   float: left;
 }
 
