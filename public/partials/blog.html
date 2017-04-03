@@ -68,20 +68,20 @@ int main()
 	if(!wc.open(0)) return 0;
 
 	/*Set up our Haar Cascade. 
-	haarcascade_frontalface_alt2.xml comes prepackaged with OpenCV, you can create your own or find another if you'd like.*/
+	haarcascade_frontalface_alt2.xml comes prepackaged with OpenCV. At the end of this blog we'll discuss creating your own.*/
 	cv::CascadeClassifier frontal_face_cascade;
 	frontal_face_cascade.load("/opencv/data/haarcascades/haarcascade_frontalface_alt2.xml");
 
-	/*Set up our storage frame*/
-	cv::Mat frame;
+	
 
-	/*Start our continous loop.*/
+	/*Start our continuous loop.*/
 	for(;;)
 	{
-		/*Capture current frame from camera*/
+		/*Initialize storage frame and read into it*/
+		cv::Mat frame;
 		wc.read(frame);
 
-		/*Convert to gray*/
+		/*Convert to grayscale*/
 		cv::Mat g_value;
 		cvtColor(frame, g_value, CV_BGR2GRAY);
 
@@ -90,7 +90,7 @@ int main()
 		/*Detect faces FROM g_value and store in our vectore faces*/
 		frontal_face_cascade.detectMultiScale(g_value, faces);
 
-		/*Iterate and draw rect around each face*/
+		/*Iterate and draw rectangle around each face*/
 		for(int i = 0; i < faces.size(); i ++)
 		{
 			/*Get current face*/
@@ -108,7 +108,7 @@ int main()
 		imshow("facial_recognition", frame);
 
 		/*End if any key is pressed*/
-		char key = (char) cv::waitKey(1);
+		int key = cv::waitKey(1);
 		if(key != -1) break;
 	}
 
@@ -118,7 +118,7 @@ int main()
 									</code></pre>
 
 									<br/>
-									<p>Not too bad, right? Get frame from camera, go to gray values, Haar Cascade for faces, draw rectangles on and show the frame. That's it. So if you're just here for the code, there you go. I've placed a link to my Github above where you can fork this project as well. </p>
+									<p>Not too bad, right? Get frame from camera, go to grayscale, Haar Cascade for faces, draw rectangles on and show the frame. That's it. So if you're just here for the code, there you go. I've placed a link to my Github above where you can fork this project as well. </p>
 									<br/>
 									<b>How It Works</b>
 									<br/>
