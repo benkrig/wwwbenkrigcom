@@ -52,9 +52,9 @@ controllers.global_controller = function($scope, $location)
 	$scope.blogs = 
 	[
 		{
-			image: 'blogs/ben.png',
+			image: ['blogs/ben.png', 'blogs/haar_features_basic.jpeg', 'blogs/haar_features_man.jpeg'],
 			title: "OpenCV: Facial Recognition using Haar Feature-based Cascade Classifiers",
-			subtitle: "Viola and Jones Method",
+			subtitle: "Using the Viola and Jones Method",
 			date: "4/2/17"
 		}
 		
