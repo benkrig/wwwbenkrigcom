@@ -55,6 +55,15 @@
 #include "opencv2/imgproc/imgproc.hpp"
 									</code></pre>
 
+									<br/>
+									<p>Let's start coding. Gameplan is as follows: initialize vars (our camera, haarcascade, and a place to store a single frame), in a loop get a frame, convert frame to grayscale, use haarcascade to return any faces, loop through our returned faces and draw a rectangle over them, repeat till signalled to close.</p>
+									<br/>
+									<pre class="prettyprint"><code class="language-cpp">
+
+#include "opencv2/objdetect/objdetect.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+									</code></pre>
 
 	  								UNDER CONSTRUCTION
 	  								
