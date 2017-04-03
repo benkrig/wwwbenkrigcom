@@ -59,10 +59,15 @@
 									<p>Let's start coding. Gameplan is as follows: first initialize vars (camera, haarcascade, and a place to store a single frame), second in a loop get a frame, third convert frame to grayscale, fourth use haarcascade to return any faces,  fifth loop through our returned faces and draw a rectangle over them, sixth repeat until signalled to close.</p>
 									<br/>
 									<pre class="prettyprint"><code class="language-cpp">
-
-#include "opencv2/objdetect/objdetect.hpp"
-#include "opencv2/highgui/highgui.hpp"
-#include "opencv2/imgproc/imgproc.hpp"
+int main()
+{
+	/*I will be hard coding scope for practice and better understanding of where we are getting Objects.
+	Again, we get VideoCapture from highgui.hpp. Click the link in the #include section to read up.*/
+	cv::VideoCapture = wc;
+	/*If you have multiple Cameras attached to your machine, you can use wc.open(< int > ) to select a different one.
+	Open camera, close if we can't.*/
+	if(!wc.open(0)) return 0;
+}
 									</code></pre>
 
 	  								UNDER CONSTRUCTION
