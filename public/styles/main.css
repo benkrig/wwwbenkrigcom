@@ -88,10 +88,6 @@ fieldset[disabled] .btn-main.active {
   text-shadow: none;
   background-color: white;
 }
-.panel-blog > p 
-{
-  text-align: left;
-}
 
 .prettyprint .panel-blog
 {
