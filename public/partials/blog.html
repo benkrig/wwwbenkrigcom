@@ -126,7 +126,7 @@ int main()
 									<p>How exactly do we get a machine to take a bunch of grayscale values and decide whether or not they contain a human face? For humans it is just intuitive to see a face and recognize it. We see a nose, ears, eyes, cheek bones, a chin, hair, etc. We see features. Computers see images as pixels, usually as a 2D Array of color values.</p>
 									<br/>
 									<div>
-										<div class="blog_horizontal">
+										<div class="blog_horizontal_parent">
 											<img class="img-responsive" ng-src="{{blogs[0].image[3]}}" alt="Pixel representation of image">
 										</div>
 										<p>The picture shown to the left is greatly simplified, but does an adequate job of showing how a tiny color image is stored in a computer. On the topic of computer vision, if we want to scan this image for yellow area we could return all array indexes where the value at index is 5. We have found all yellow pixels in our image. Bringing this small example to our current problem, we are scanning much larger arrays for indexes that return the value of a human face.
@@ -140,7 +140,7 @@ int main()
 
 
 
-									<div class="blog_horizontal">
+									<div class="blog_horizontal_parent">
 										<div class="blog_horizontal">
 											<img class="img-responsive" ng-src="{{blogs[0].image[1]}}" alt="Metafora">
 										</div>

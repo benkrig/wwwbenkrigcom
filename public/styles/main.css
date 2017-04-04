@@ -106,11 +106,15 @@ fieldset[disabled] .btn-main.active {
   width: 100%;
   height: 100vh
 }
+.blog_horizontal_parent
+{
+  overflow: hidden;
+}
 .blog_horizontal
 {
   width: 50%;
   float: left;
-  overflow: hidden;
+
 }
 
 
