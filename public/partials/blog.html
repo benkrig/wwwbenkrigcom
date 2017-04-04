@@ -153,6 +153,9 @@ int main()
 										<div class="blog_horizontal">
 											<img class="img-responsive" ng-src="{{blogs[0].image[4]}}" alt="Metafora">
 										</div>
+										<div class="blog_horizontal">
+											<img class="img-responsive" ng-src="{{blogs[0].image[5]}}" alt="Metafora">
+										</div>
 										<p>
 											But hold on, we're dealing with really big pictures here and lots of pixels... Isn't summing the pixels every time we do a Haar Feature Classifier going to be really slow? Yes it would. The solution is the Integral Image. I'm not going to go into too much depth on this, however. Essentially, at the start of our Haar Cascade, we calculate the rectangular sum of every pixel in the image. The result looks something like the image on the left. With this new set of values we can calculate the rectangular area of any subset of indexes using this one Integral Image. We don't need to sum over thousands of pixels every time. That means this is pretty fast.
 										</p>
@@ -164,6 +167,7 @@ int main()
 										<div class="blog_horizontal">
 											<img class="img-responsive" ng-src="{{blogs[0].image[2]}}" alt="Metafora">
 										</div>
+
 										<p>
 											The next step is realizing that we CAN actually use these Haar-like features to analyze a human face. As in the pictures on the left, we can place our various features over different parts of the face and get accurate, consistent results. For example, if we use our Edge Feature shape we can compare the area around the eyes with the area below and note that a face will show smaller, darker values around the eyes and higher, brighter values beneath and on the cheeks. Essentially, we are now left with analyzing large numbers of faces to find averages of cascading Haar-like Shapes over the face.
 										</p>
