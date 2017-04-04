@@ -114,6 +114,7 @@ fieldset[disabled] .btn-main.active {
 {
   width: 50%;
   float: left;
+  clear:left;
 
 }
 
