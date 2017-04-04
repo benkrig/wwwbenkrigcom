@@ -129,30 +129,34 @@ int main()
 										<div class="blog_horizontal">
 											<img class="img-responsive" ng-src="{{blogs[0].image[3]}}" alt="Pixel representation of image">
 										</div>
-										<p>The picture shown above is greatly simplified, but does an adequate job of showing how a tiny color image is stored in a computer. On the topic of computer vision, if we want to scan this image for yellow area we could return all array indexes where the value at index is 5. We have found all yellow pixels in our image. Bringing this small example to our current problem, we are scanning much larger arrays for indexes that return the value of a human face.
+										<p>The picture shown on the left is greatly simplified, but does an adequate job of showing how a tiny color image is stored in a computer. On the topic of computer vision, if we want to scan this image for yellow area we could return all array indexes where the value at index is 5. We have found all yellow pixels in our image. Bringing this small example to our current problem, we are scanning much larger arrays for indexes that return the value of a human face.
 										</p> 
 										<br/>
 										<p>
-										The reasonable question is what value does a human face have? This question was answered by Paul Viola and Michael Jones in their paper "Rapid Object Detection using a Boosted Cascade of Simple Features." Human faces have many values, and when put (cascaded) through many consecutive pass or fail tests (classifier features) we can determine whether or not we do indeed have a human face in our image.
+										The question is what value does a human face have? We got the answer in 2001 from Paul Viola and Michael Jones in their paper "Rapid Object Detection using a Boosted Cascade of Simple Features." Human faces have many values, and when put (cascaded) through many consecutive pass or fail tests (classifiers) we can determine whether or not we have a human face in our image.
 										</p>
 									</div>
 									<br/>
-
-
 
 									<div class="blog_horizontal_parent">
 										<div class="blog_horizontal">
 											<img class="img-responsive" ng-src="{{blogs[0].image[1]}}" alt="Metafora">
 										</div>
 										<p>
-											These classifiers make use of the differences found in small chunks of our image when compared with one another. Remember we are looking at very large 2D arrays, so we break it into smaller pieces to more easily compare the image. To compare these small chunks we make use of Haar Wavelet like shapes (All you need to know about the Haar Wavelet is that is shaped like a rectangle). To the left, we can see the 3 original shapes used by Viola and Jones. Edge, line, and four rectangle features. If we place one these shapes over an image, we can sum the values of pixels within our black rectangle and white rectangle allowing for comparisons to be made between the two. One rectangle may be lighter, darker, or they may be the same. This gives us a place to start with  We've found our features!
+											These classifiers make use of the differences found in small chunks of our image when compared with one another. Remember we are looking at very large 2D arrays, we break the array into smaller pieces to more easily work with. To compare these small chunks we make use of Haar Wavelet-like shapes (All you need to know about the Haar Wavelet is that is shaped like a rectangle). To the left, we can see the 3 original shapes used by Viola and Jones. Edge, line, and four rectangle features. If we place one these shapes over an image, we can sum the values of pixels within our black rectangle and white rectangle allowing for comparisons to be made between the two. One rectangle may be lighter, darker, or they may be the same. This gives us a place to start. We've got a method now to test portions of our image for a face.
 										</p>
 									</div>
+									<br/>
 
-										
-									<div class="blog_horizontal">
-										<img class="img-responsive" ng-src="{{blogs[0].image[2]}}" alt="Metafora">
+									<div class="blog_horizontal_parent">
+										<div class="blog_horizontal">
+											<img class="img-responsive" ng-src="{{blogs[0].image[2]}}" alt="Metafora">
+										</div>
+										<p>
+											The next step is realizing that we CAN actually use these Haar-like features to analyze a human face. As in the pictures on the left, we can place our various features over different parts of the face and get accurate, consistent results. For example, if we use our Edge Feature shape we can compare the area around the eyes with the area below and note that a face will show smaller, darker values around the eyes and higher, brighter values beneath and on the cheeks. Essentially, we are now left with analyzing large numbers of faces to find averages of cascading Haar-like Shapes over the face.
+										</p>
 									</div>
+									<br/>
 
 	  								UNDER CONSTRUCTION
 								</div>
