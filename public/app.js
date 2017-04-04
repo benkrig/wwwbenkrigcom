@@ -54,7 +54,7 @@ controllers.global_controller = function($scope, $location)
 		{
 			code: 
 "",
-			image: ['blogs/ben.png', 'blogs/haar_features_basic.jpeg', 'blogs/haar_features_man.jpeg', 'blogs/pixel_representation.png'],
+			image: ['blogs/ben.png', 'blogs/haar_features_basic.jpeg', 'blogs/haar_features_man.jpeg', 'blogs/pixel_representation.png', 'blogs/integral_image.png'],
 			title: "OpenCV: Facial Recognition using Haar Feature-based Cascade Classifiers",
 			subtitle: "Using the Viola and Jones Method",
 			date: "4/2/17"
