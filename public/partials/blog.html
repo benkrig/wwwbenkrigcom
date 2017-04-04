@@ -123,7 +123,11 @@ int main()
 									<br/>
 									<b>How It Works</b>
 									<br/>
-									<p>How exactly do we get a machine to take a bunch of grayscale values and decide whether or not they contain a human face? To do this let's start with a human perspective of the problem. What makes us say this is a face, and a human one at that, when we see another person? Features like a nose, ears, eyes, etc all play a role in recognizing a face. But how can we possibly transfer this to a machine? We do this using something called Haar Features.</p>
+									<p>How exactly do we get a machine to take a bunch of grayscale values and decide whether or not they contain a human face? For humans it is just intuitive to see a face and recognize it. We see a nose, ears, eyes, cheek bones, a chin, hair, etc. We already know a computer stores an image as an array of pixels which holds values to represent colors of some sort at each location. Well, what happens if we break down our array of pixels into smaller arrays, kernals, or rectangles? That's where Haar Features come into play.</p>
+									<div class="blog_horizontal">
+											<img class="img-responsive" ng-src="{{blogs[0].image[3]}}" alt="Pixel representation of image">
+										</div>
+									<br/>
 									<div>
 										<div class="blog_horizontal">
 											<img class="img-responsive" ng-src="{{blogs[0].image[1]}}" alt="Metafora">
