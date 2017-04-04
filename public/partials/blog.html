@@ -34,7 +34,7 @@
 	  								<br/>
 	  								<p>We're going to be working with OpenCV to create a simple program that utilizes Haar Cascades to find and track faces through our camera. We're assuming that you've already gone through the always fun process of building OpenCV on your machine and are ready to start using its libraries and dependancies in your IDE of choice. OpenCV allows you to use Python or Java just as easily, but I'm going to be working with the C family out of preference.</p>
 	  								<br/>
-	  								<p>The majority of people who end up here will not be interested in WHY/HOW this all works. They'll just be here to cut and paste the code and start working on this for themselves. That's all fine. First, I'll do a brief breakdown of the code for these people. Finally, at the end of this blog I'll try to go into detail on what exactly a Haar Feature is, and how we can make use of them in conjunction with a bunch of successive (also called cascading) pass/fail tests (also called classifiers) to find objects in images.</p>
+	  								<p>The majority of people who end up here will not be interested in how this all works. They are here to cut and paste the code and start working on this for themselves. That's all fine. First, I'll do a brief breakdown of the code for these people. After, for the people who want to understand what's going on, I'll go into detail on what exactly a Haar Feature is, and how we make use of them in conjunction with a bunch of successive (also called cascading) pass/fail tests (also called classifiers) to find objects in images.</p>
 
 	  								<br/>
 	  								<b>Code Breakdown</b>
@@ -76,7 +76,7 @@ int main()
 
 	
 
-	/*Start our continuous loop.*/
+	/*We're continuously looking for faces from our camera feed, so we use an infinite loop until we want to break.*/
 	for(;;)
 	{
 		/*Initialize storage frame and read into it*/
@@ -120,17 +120,17 @@ int main()
 									</code></pre>
 
 									<br/>
-									<p>Not too bad, right? Get frame from camera, go to grayscale, Haar Cascade for faces, draw rectangles on and show the frame. That's it. So if you're just here for the code, there you go. I've placed a link to my Github above where you can fork this project as well. </p>
+									<p>Not too bad, right? Get a frame from a camera, convert to grayscale, Haar Cascade for faces, put a marker where the face is, and repeat. That's it. So if you're just here for the code, there you go. I've placed a link to my GitHub above where you can fork this project as well.</p>
 									<br/>
 									<b>How It Works</b>
 									<br/>
-									<p>How exactly do we get a machine to take a bunch of grayscale values and decide whether or not they contain a human face? For humans it is just intuitive to see a face and recognize it. We see a nose, ears, eyes, cheek bones, a chin, hair, etc. We see features. Computers see images as pixels, usually as a 2D Array of color values.</p>
+									<p>How exactly does a machine take a bunch of grayscale values and decide whether or not they contain a human face? Let's break this down. For humans, it is just intuitive to see a face and recognize it. We see a nose, ears, eyes, cheek bones, a chin, hair, etc. We see features. Computers see images as pixels which are stored in some variation of a 2D or 3D array depending on format and content. Our features are in these arrays.</p>
 									<br/>
 									<div class="blog_horizontal_parent">
 										<div class="blog_horizontal">
 											<img class="img-responsive" ng-src="{{blogs[0].image[3]}}" alt="Pixel representation of image">
 										</div>
-										<p>The picture shown on the left is greatly simplified, but does an adequate job of showing how a tiny color image is stored in a computer. On the topic of computer vision, if we want to scan this image for yellow area we could return all array indexes where the value at index is 5. We have found all yellow pixels in our image. Bringing this small example to our current problem, we are scanning much larger arrays for indexes that return the value of a human face.
+										<p>The picture shown on the left is greatly simplified. It shows how a tiny color image is stored in a computer. If we want to scan this image for its yellow area we could return all array indexes where the value at index is 5. We have found all yellow pixels in our image. Bringing this small example to our current problem, we are scanning much larger arrays for indexes that return the value of a human face.
 										</p> 
 										<br/>
 										<p>
