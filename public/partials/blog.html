@@ -132,16 +132,19 @@ int main()
 									</p> 
 									<br/>
 									<p>
-									The reasonable question is what value does a human face have? This question was answered by Paul Viola and Michael Jones in their paper "Rapid Object Detection using a Boosted Cascade of Simple Features." Human faces have many values, and when put (cascaded) through many consecutive pass or fail classifier features we can determine whether or not we do indeed have a human face in our image.
+									The reasonable question is what value does a human face have? This question was answered by Paul Viola and Michael Jones in their paper "Rapid Object Detection using a Boosted Cascade of Simple Features." Human faces have many values, and when put (cascaded) through many consecutive pass or fail tests (classifier features) we can determine whether or not we do indeed have a human face in our image.
 									</p>
-									<div>
-										<div class="blog_horizontal">
-											<img class="img-responsive" ng-src="{{blogs[0].image[1]}}" alt="Metafora">
-										</div>
+									<br/>
+									<div class="blog_horizontal">
+										<img class="img-responsive" ng-src="{{blogs[0].image[1]}}" alt="Metafora">
+									</div>
+									<p>
+										These classifier tests make use of the differences found in smaller chunks of our image when compared. Remember we are trying to scan very large 2D arrays for very small comparisons, so we break it into smaller pieces while we scan the image. To compare these small chunks we make use of Haar Wavelet (all that you need to know is that this is a square shaped sequence) like shapes. To the left, we can see the 3 original shapes used by Viola and Jones. Edge, line, and four rectangle features. If we place one these shapes over an image, we can sum the values of pixels within our black rectangle and white rectangle allowing for comparisons to be made. One rectangle may be lighter, darker, or they may be the same. We've found our features!
+									</p>
+
 										
-										<div class="blog_horizontal">
-											<img class="img-responsive" ng-src="{{blogs[0].image[2]}}" alt="Metafora">
-										</div>
+									<div class="blog_horizontal">
+										<img class="img-responsive" ng-src="{{blogs[0].image[2]}}" alt="Metafora">
 									</div>
 
 	  								UNDER CONSTRUCTION
