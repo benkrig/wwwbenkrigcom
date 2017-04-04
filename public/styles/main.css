@@ -112,6 +112,10 @@ fieldset[disabled] .btn-main.active {
   float: left;
   clear: left;
 }
+.blog_horizontal > img 
+{
+  height:auto;
+}
 
 
 
