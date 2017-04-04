@@ -130,7 +130,7 @@ int main()
 										<div class="blog_horizontal">
 											<img class="img-responsive" ng-src="{{blogs[0].image[3]}}" alt="Pixel representation of image">
 										</div>
-										<p>The picture shown on the left is greatly simplified. It shows how a tiny color image is stored in a computer. If we want to scan this image for its yellow area we could return all array indexes where the value at index is 5. We have found all yellow pixels in our image. Bringing this small example to our current problem, we are scanning much larger arrays for indexes that return the value of a human face.
+										<p>The picture shown on the left is greatly simplified. It shows how a tiny color image is stored in a computer. If we want to scan this image for its yellow area we could return all array indexes where the indexed value is 5. We just found all yellow pixels in our image. Bringing this small example to our current problem, we are scanning much larger arrays for indexes that return the value of a human face.
 										</p> 
 										<br/>
 										<p>
@@ -144,7 +144,7 @@ int main()
 											<img class="img-responsive" ng-src="{{blogs[0].image[1]}}" alt="Metafora">
 										</div>
 										<p>
-											These classifiers make use of the differences found in small chunks of our image when compared with one another. Remember we are looking at very large 2D arrays, we break the array into smaller pieces to more easily work with. To compare these small chunks we make use of Haar Wavelet-like shapes (All you need to know about the Haar Wavelet is that is shaped like a rectangle). To the left, we can see the 3 original shapes used by Viola and Jones. Edge, line, and four rectangle features. If we place one these shapes over an image, we can sum the values of pixels within our black rectangle and white rectangle allowing for comparisons to be made between the two. One rectangle may be lighter, darker, or they may be the same. This gives us a place to start. We've got a method now to test portions of our image for a face.
+											These classifiers make use of differences found in small chunks of pixels within images when compared with one another. Remember we are looking at pictures, meaning very large arrays. We break the array into smaller pieces that are easier to work with. To compare these small chunks we make use of Haar Wavelet-like shapes. A Haar Wavelet is a sequence of a square shaped function. All that wavelet talk aside, our Haar Wavelet-like Features come into play as we attempt to compare chunks of pixels with other chunks. To the left, we can see the 3 original shapes used by Viola and Jones. Edge, line, and four rectangle features. If we place one these shapes over an image, we can sum the values of pixels within our black rectangle and white rectangle allowing for comparisons to be made between the two. One rectangle may have a low sum value, a higher sum value, or be equal with the other. This gives us a place to start. We've got a way to compare parts of our images now.
 										</p>
 									</div>
 									<br/>
