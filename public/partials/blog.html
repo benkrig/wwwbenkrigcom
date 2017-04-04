@@ -159,6 +159,10 @@ int main()
 										<p>
 											But hold on, we're dealing with really big pictures here and lots of pixels... Isn't summing the pixels every time we do a Haar Feature Classifier going to be really slow? Yes it would. The solution is the Integral Image. I'm not going to go into too much depth on this, however. Essentially, at the start of our Haar Cascade, we calculate the rectangular sum of every pixel in the image. The result looks something like the image on the left. With this new set of values we can calculate the rectangular area of any subset of indexes using this one Integral Image. We don't need to sum over thousands of pixels every time. That means this is pretty fast.
 										</p>
+										<br/>
+										<p>
+											Looking at the second image on our left, we see the process we go through to get the sum of our rectangles. We're not adding every value inside of our rectangle. No matter the size of our rectangle, we only use 4 operations to get to the summed area. This is huge for processing and speed.
+										</p>
 									</div>
 									<br/>
 
