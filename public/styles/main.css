@@ -115,7 +115,11 @@ fieldset[disabled] .btn-main.active {
   width: 50%;
   float: left;
   clear:left;
-
+}
+.blog_horizontal_img
+{
+  width: 50%;
+  float: left;
 }
 
 
