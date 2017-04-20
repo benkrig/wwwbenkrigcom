@@ -59,8 +59,9 @@ controllers.global_controller = function($scope, $location)
 			date: "4/4/17"
 		},
 		{
-			title:"OpenCV: Slope, Gradient, Partial Derivatives and You",
-			subtitle:"Or, Basic Edge Detection",
+			image: ['blogs/edge_detection_img1.png'],
+			title:"OpenCV: Slopes, Gradients, Partial Derivatives and You",
+			subtitle:"Or Basic Edge Detection",
 			date: ""
 		}
 		
