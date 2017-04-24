@@ -60,7 +60,7 @@ controllers.global_controller = function($scope, $location)
 		},
 		{
 			image: ['blogs/edge_detection_img1.png'],
-			title:"OpenCV: Canny Edge Detection, Sobel Operators, and Gradients",
+			title:"OpenCV: Gradients, Sobel Operators, and Canny Edge Detection",
 			subtitle:"Or Basic Edge Detection",
 			date: "4/24/17"
 		}
