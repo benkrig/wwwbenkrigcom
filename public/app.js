@@ -60,9 +60,9 @@ controllers.global_controller = function($scope, $location)
 		},
 		{
 			image: ['blogs/edge_detection_img1.png'],
-			title:"OpenCV: Slopes, Gradients, Partial Derivatives and You",
+			title:"OpenCV: Canny Edge Detection, Sobel Operators, and Gradients",
 			subtitle:"Or Basic Edge Detection",
-			date: ""
+			date: "4/24/17"
 		}
 		
 	];
