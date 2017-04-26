@@ -1,6 +1,6 @@
 var app = angular.module('benkrig', ['ngRoute', 'ui.bootstrap']);
 
-app.config(function($routeProvider)
+app.config(function($routeProvider, $locationProvider)
 {
 	$routeProvider
 	.when('/',
@@ -28,6 +28,8 @@ app.config(function($routeProvider)
 		templateUrl: 'partials/home.html',
 		controller: 'NavBarController'
 	});
+	
+	$locationProvider.html5Mode(true);
 });
 
 var controllers = {};
