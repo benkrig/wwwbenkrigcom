@@ -30,11 +30,11 @@
 	  								<h3>{{blogs[1].title}}</h3>
 	  								<h5>{{blogs[1].subtitle}}</h5>
 	  								<br/>
-	  								<p><b>{{blogs[1].date}}</b> - Time for some more fun. In this segment of Ben’s OpenCV Journey we’re discussing the basics of Edge Detection. We’re looking at the Sobel Operator and then the Canny Method for Edge Detection. As usual, we’ll go over source code initially for anyone who is looking to grab-and-go, then we’ll go into detail on where Edge Detection comes from and the basics of how it works.
+	  								<p><b>{{blogs[1].date}}</b> - Time for some more fun. In this segment of Ben’s OpenCV Journey we’re discussing the basics of Edge Detection. We’ll begin by talking about the Sobel Operator, computes and shows edges in an image. Then, we'll discuss the Canny Method of Edge Detection, which essentially an extension build out of the Sobel Operator to give us a more accurate picture of the edges in an image. As usual, we’ll go over source code initially for anyone who is looking to grab-and-go, then at the end of this blog we’ll go into detail on where Edge Detection comes from and the basics of how it works.
 
-									First, what is Edge Detection and why is it useful? When we talk about Edge Detection we are talking about boundaries of objects in images. Finding objects in images is an obviously useful concept and problem for computer vision to address. How do we recognize objects and separate them from one another?</p>
+									What is Edge Detection and why is it useful? We see edges every where around us. In fact, we are only able to differentiate between objects in our vision through edges. Just as edges are useful to us humans in recognizing objects from one another, edges are also important in computer vision to spot objects.</p>
 									<br/> 
-									<p>Well, basically we recognize edges in our vision. To be more descriptive, we notice the sharp changes in color between different objects. Sometimes, if an object is of similar color, it's hard even for us humans to spot an edge or to see where one object ends and another begins. Overall, humans have an easy time spotting edges. Let’s see how we can get a computer to recognize edges. </p>
+									<p>To be more descriptive, we notice the sharp changes in color between different objects. Without edges, or if an object is of similar color, it's hard even for us humans to spot an edge or to see where one object ends and another begins. Let’s see how we can get a computer to recognize edges. </p>
 									<br/>
 									
 									<p> </p>
@@ -52,11 +52,14 @@
 		  								<br/>
 	  								</p>
 	  								<pre class="prettyprint"><code class="language-cpp">
-/*I've linked the official reference docs for these guys above. If you're using a Class/Header file, you should know what else it can do.*/
+/*I've linked the official reference docs for these guys above. Take a look at them.*/
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 									</code></pre>
-									
+									<br/>
+									<p>Gameplan for Sobel Operator: run webcam, set constant variables, start contiuous loop, process each frame with Sobel, show results. A basic implementation of the Sobel Operator is shown below.</p>
+									<br/>
+
 	  								<pre class="prettyprint"><code class="language-cpp">
 /*
 Implementation of OpenCV's Sobel Operator
